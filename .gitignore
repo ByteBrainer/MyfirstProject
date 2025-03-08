@@ -1,0 +1,56 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env
+*.env
+*.venv
+
+# Distribution / packaging
+.Python
+dist/
+build/
+*.egg-info/
+*.egg
+
+# Flask specific
+instance/
+config.py
+*.log
+
+# Unit test / coverage reports
+.coverage
+htmlcov/
+*.cover
+*.py,cover
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Database
+*.sqlite3
+*.db
+*.sqlite
+
+# Cache files
+*.cache
+*.mo
+*.pot
+
+# IDE / Editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# AWS / Google Cloud / Other Credentials
+.aws/
+.gcloud/
+.key
+*.pem
+
+# Node dependencies (if using React frontend)
+node_modules/

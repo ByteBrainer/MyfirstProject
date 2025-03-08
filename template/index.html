@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainfall Prediction</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color:black;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background: white;
+            padding:30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            text-align: left;
+            margin: 10px 0 5px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        input::placeholder {
+            color: #999;
+            font-style: italic;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        h2 {
+            color: green;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Rainfall Prediction</h1>
+        <form action="/predict" method="post">
+            <label for="pressure">Pressure:</label>
+            <input type="text" id="pressure" name="pressure" placeholder="Enter pressure value"><br>
+
+            <label for="maxtemp">Max Temperature:</label>
+            <input type="text" id="maxtemp" name="maxtemp" placeholder="Enter max temp"><br>
+
+            <label for="mintemp">Min Temperature:</label>
+            <input type="text" id="mintemp" name="mintemp" placeholder="Enter min temp"><br>
+
+            <label for="dewpoint">Dew Point:</label>
+            <input type="text" id="dewpoint" name="dewpoint" placeholder="Enter dew point"><br>
+
+            <label for="humidity">Humidity:</label>
+            <input type="text" id="humidity" name="humidity" placeholder="Enter humidity level"><br>
+
+            <label for="cloud">Cloud Cover:</label>
+            <input type="text" id="cloud" name="cloud" placeholder="Enter cloud cover %"><br>
+
+            <button type="submit">Predict</button>
+        </form>
+        {% if prediction_text %}
+        <h2>{{ prediction_text }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
